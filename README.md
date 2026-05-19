@@ -2,7 +2,9 @@
 
 Static GitHub Pages publish folder for the Dutch A2 inburgering lesson HTML packages.
 
-Live site: https://meanceo.github.io/inburgering-lessons/
+Live site: https://inburgering.learn-dutch-with-ai.com/
+
+GitHub Pages fallback: https://meanceo.github.io/inburgering-lessons/
 
 GitHub repository: https://github.com/meanceo/inburgering-lessons
 
@@ -19,3 +21,9 @@ GitHub repository: https://github.com/meanceo/inburgering-lessons
 ## Publish
 
 This folder is intended to be pushed to a public GitHub repository named inburgering-lessons and served with GitHub Pages from main / root.
+
+The `CNAME` file keeps the custom subdomain connected:
+
+```text
+inburgering.learn-dutch-with-ai.com
+```
