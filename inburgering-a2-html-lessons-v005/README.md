@@ -1,6 +1,6 @@
 # Inburgering A2 HTML Lessons - Version 5
 
-This is a full static HTML exam prep package for Violetta Bonenkamp.
+This is a full static HTML exam prep package by Violetta Bonenkamp.
 
 Open:
 

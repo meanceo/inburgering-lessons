@@ -1335,7 +1335,7 @@ const lessons = [
         "answer": "De rode paprika."
       },
       {
-        "title": "Voornaamwoord voor Violetta",
+        "title": "Voornaamwoord in een zin",
         "prompt": "Opdracht: Vervang Violetta: Violetta belt de gemeente.",
         "answer": "Zij belt de gemeente."
       },

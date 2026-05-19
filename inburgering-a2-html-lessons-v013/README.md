@@ -1,6 +1,6 @@
 # Inburgering A2 HTML Lessons - Version 13
 
-This is a full static HTML exam prep package for Violetta Bonenkamp.
+This is a full static HTML exam prep package by Violetta Bonenkamp.
 
 Open:
 
@@ -69,6 +69,8 @@ Use the next unused numeric suffix at run time. Keep all HTML, audio, image, and
 Multiple-choice rule: do not make the correct answer always `A`. For KNM and any other A/B/C tasks, distribute correct answers across `A`, `B`, and `C` and keep the HTML answer key aligned with the Markdown files.
 
 Answer UI rule: HTML lessons must open with answers hidden. Keep the global answer button at the top, and also make every individual exercise answer clickable so the learner can show or hide just that one answer.
+
+Public page rule: HTML titles, meta descriptions, footers, and public copy must use `by Violetta Bonenkamp`, not learner-targeted phrasing. Each published page must include one `<title>`, one meta description, one canonical URL, one visible `<h1>`, and header/footer navigation back to the main lesson index.
 
 Mobile layout rule: on phone widths, the main `.shell` must use the full viewport with small gutters, for example `width: calc(100% - 24px); max-width: 100%; margin-inline: auto;`. Do not use narrow fixed caps such as `366px` or `320px` for the whole lesson shell, and do not pin mobile shell margins in a way that leaves empty room on the right.
 

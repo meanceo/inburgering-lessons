@@ -38,7 +38,7 @@ Current dated HTML file:
 Future automation idea:
 
 ```text
-Every morning, create one new daily Markdown lesson and one matching HTML page for Dutch A2 inburgering practice. Keep exam-style content in Dutch, personalize writing and speaking for Violetta, include one listening audio file, and keep answers directly under each task.
+Every morning, create one new daily Markdown lesson and one matching HTML page for Dutch A2 inburgering practice. Keep exam-style content in Dutch, personalize writing and speaking by Violetta, include one listening audio file, and keep answers directly under each task.
 ```
 
 ## Automation Asset Setup

@@ -1,6 +1,6 @@
 # Inburgering A2 HTML Lessons - Version 2
 
-This is a static HTML daily exam prep package for Violetta Bonenkamp.
+This is a static HTML daily exam prep package by Violetta Bonenkamp.
 
 Open:
 

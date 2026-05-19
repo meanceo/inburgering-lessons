@@ -1,6 +1,6 @@
 # Inburgering A2 HTML Lessons - Version 1 Updated
 
-This is the refreshed v1 static HTML daily exam prep package for Violetta Bonenkamp.
+This is the refreshed v1 static HTML daily exam prep package by Violetta Bonenkamp.
 
 Open:
 
@@ -32,7 +32,7 @@ Generate each speaking image once. The first successful Azure Image 1.5 output i
 
 ## Personalization
 
-The speaking and writing practice is adapted for Violetta: a 44-year-old Russian woman living in Sterksel, North Brabant, married to a Dutch man, raising two girls, working from home as a startup founder and entrepreneur, and interested in technology, AI, swimming, cycling, walking, podcasts, healthy food, exercise, writing, and travel.
+The speaking and writing practice is adapted by Violetta: a 44-year-old Russian woman living in Sterksel, North Brabant, married to a Dutch man, raising two girls, working from home as a startup founder and entrepreneur, and interested in technology, AI, swimming, cycling, walking, podcasts, healthy food, exercise, writing, and travel.
 
 ## Files
 
