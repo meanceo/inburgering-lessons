@@ -851,3 +851,42 @@ h1 {
     font-size: 12px;
   }
 }
+
+@media (max-width: 860px) {
+  #answerMode {
+    width: 46px;
+    min-width: 46px;
+    max-width: 46px;
+    flex: 0 0 46px;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+    font-size: 0;
+    color: var(--blue);
+  }
+
+  #answerMode::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+  }
+
+  #answerMode::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 10px;
+    height: 5px;
+    border-left: 3px solid currentColor;
+    border-bottom: 3px solid currentColor;
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+
+  body.answers-hidden #answerMode::after {
+    opacity: 0.2;
+  }
+}

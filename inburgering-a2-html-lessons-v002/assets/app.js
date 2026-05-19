@@ -1148,7 +1148,10 @@ lessonPanel.addEventListener("input", (event) => {
 answerMode.addEventListener("click", () => {
   document.body.classList.toggle("answers-hidden");
   const hidden = document.body.classList.contains("answers-hidden");
-  answerMode.textContent = hidden ? "Toon antwoorden" : "Verberg antwoorden";
+  const answerModeLabel = hidden ? "Toon antwoorden" : "Verberg antwoorden";
+  answerMode.textContent = answerModeLabel;
+  answerMode.setAttribute("aria-label", answerModeLabel);
+  answerMode.setAttribute("title", answerModeLabel);
 });
 
 printLesson.addEventListener("click", () => {

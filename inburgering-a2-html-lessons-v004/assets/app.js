@@ -1695,7 +1695,10 @@ function syncAnswerModeText() {
   const buttons = getAnswerButtons();
   const allOpen = buttons.length > 0 && buttons.every((button) => button.classList.contains("is-open"));
   document.body.classList.toggle("answers-hidden", !allOpen);
-  answerMode.textContent = allOpen ? "Verberg antwoorden" : "Toon antwoorden";
+  const answerModeLabel = allOpen ? "Verberg antwoorden" : "Toon antwoorden";
+  answerMode.textContent = answerModeLabel;
+  answerMode.setAttribute("aria-label", answerModeLabel);
+  answerMode.setAttribute("title", answerModeLabel);
 }
 
 lessonTabs.addEventListener("click", (event) => {

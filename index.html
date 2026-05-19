@@ -3,51 +3,421 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dutch A2 Inburgering Lessons</title>
+  <title>Dagelijkse Examenvoorbereiding A2</title>
   <style>
-    :root { --ink:#302f2f; --muted:#666; --line:#dfdfdf; --green:#52c800; --blue:#1ea7e8; --cream:#fbfaf6; }
+    :root {
+      --ink: #302f2f;
+      --muted: #666;
+      --line: #dfdfdf;
+      --green: #58cc02;
+      --green-dark: #46a302;
+      --blue: #1cb0f6;
+      --yellow: #ffc800;
+      --red: #ff4b4b;
+      --lilac: #efe4ff;
+      --cream: #fbfaf6;
+      --paper: #fff;
+      --shadow: 0 16px 42px rgba(48, 47, 47, 0.09);
+    }
+
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--cream); }
-    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    header { padding: 32px 0 24px; border-bottom: 1px solid var(--line); background: #fff; }
-    h1 { margin: 0; font-size: clamp(2rem, 5vw, 4.5rem); line-height: .96; letter-spacing: 0; }
-    .lead { max-width: 760px; margin: 16px 0 0; color: var(--muted); font-size: 1.15rem; line-height: 1.5; font-weight: 700; }
-    main { padding: 28px 0 48px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
-    a.card { display: grid; gap: 12px; min-height: 152px; padding: 18px; color: inherit; text-decoration: none; background: #fff; border: 2px solid var(--line); border-radius: 8px; box-shadow: 0 4px 0 rgba(0,0,0,.12); }
-    a.card:hover, a.card:focus-visible { outline: none; border-color: var(--green); box-shadow: 0 4px 0 #2f9300; }
-    .tag { width: max-content; padding: 7px 10px; border-radius: 8px; background: #eefdde; border: 2px solid #a9e78b; color: #247a00; font-weight: 900; }
-    strong { font-size: 1.2rem; line-height: 1.2; }
-    p { margin: 0; color: var(--muted); line-height: 1.45; font-weight: 700; }
-    footer { padding: 18px 0; border-top: 1px solid var(--line); color: var(--muted); font-weight: 700; background:#fff; }
-    @media (max-width: 640px) { .shell { width: calc(100% - 24px); max-width: 100%; } header { padding-top: 24px; } .grid { grid-template-columns: 1fr; } }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Nunito, ui-rounded, "Avenir Next", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      letter-spacing: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      background:
+        linear-gradient(180deg, #fff 0%, #fff 70%, #f3fbff 70%, #f3fbff 100%);
+      border-bottom: 2px solid var(--line);
+    }
+
+    .topline {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+      font-weight: 900;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-size: 18px;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 2px solid var(--green-dark);
+      border-bottom-width: 5px;
+      border-radius: 8px;
+      background: var(--green);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
+    .toplink {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border: 2px solid #d7eefc;
+      border-bottom-width: 5px;
+      border-radius: 8px;
+      background: var(--paper);
+      color: #1483ba;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.7fr);
+      gap: 28px;
+      align-items: end;
+      padding: 28px 0 34px;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(2.35rem, 5.4vw, 4.9rem);
+      line-height: 0.98;
+      font-weight: 1000;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: #525252;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 18px;
+      border: 2px solid var(--green-dark);
+      border-bottom-width: 5px;
+      border-radius: 8px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .button.secondary {
+      border-color: #d7eefc;
+      background: var(--paper);
+      color: #1483ba;
+    }
+
+    .grammar-feature {
+      min-width: 0;
+      padding: 18px;
+      border: 2px solid #d8cdf5;
+      border-bottom-width: 7px;
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .feature-tag {
+      width: max-content;
+      max-width: 100%;
+      padding: 7px 10px;
+      border: 2px solid #d8cdf5;
+      border-radius: 8px;
+      background: var(--lilac);
+      color: #7442a6;
+      font-size: 12px;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(2, 48px);
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
+    .tile {
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 2px solid rgba(48, 47, 47, 0.12);
+      border-bottom-width: 5px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 1000;
+    }
+
+    .tile:nth-child(1) { background: var(--green); }
+    .tile:nth-child(2) { background: var(--blue); }
+    .tile:nth-child(3) { background: var(--yellow); color: #4b3b00; }
+    .tile:nth-child(4) { background: var(--red); }
+
+    .grammar-feature h2 {
+      margin: 0;
+      font-size: 1.65rem;
+      line-height: 1.08;
+      font-weight: 1000;
+    }
+
+    .grammar-feature p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .stat {
+      min-height: 76px;
+      padding: 12px;
+      border: 2px solid var(--line);
+      border-bottom-width: 5px;
+      border-radius: 8px;
+      background: #fffef9;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.45rem;
+      line-height: 1;
+      font-weight: 1000;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    main { padding: 30px 0 52px; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+      line-height: 1.05;
+      font-weight: 1000;
+    }
+
+    .section-head p {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    a.card {
+      min-height: 168px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      padding: 18px;
+      color: inherit;
+      background: var(--paper);
+      border: 2px solid var(--line);
+      border-bottom-width: 6px;
+      border-radius: 8px;
+      box-shadow: 0 4px 0 rgba(48, 47, 47, 0.1);
+    }
+
+    a.card:hover,
+    a.card:focus-visible {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 6px 0 #2f9300;
+      transform: translateY(-1px);
+    }
+
+    .tag {
+      width: max-content;
+      max-width: 100%;
+      padding: 7px 10px;
+      border: 2px solid #a9e78b;
+      border-radius: 8px;
+      background: #eefdde;
+      color: #247a00;
+      font-size: 12px;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .card strong {
+      font-size: 1.22rem;
+      line-height: 1.15;
+      font-weight: 1000;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.42;
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 18px 0;
+      border-top: 2px solid var(--line);
+      color: var(--muted);
+      font-weight: 800;
+      background: #fff;
+    }
+
+    @media (max-width: 820px) {
+      .shell { width: calc(100% - 24px); max-width: 100%; }
+      .topline { align-items: flex-start; flex-direction: column; }
+      .hero { grid-template-columns: 1fr; padding-top: 20px; }
+      .grammar-feature { order: -1; }
+      h1 { font-size: 2.55rem; overflow-wrap: anywhere; text-wrap: auto; }
+      .lead { font-size: 1rem; overflow-wrap: anywhere; }
+      .section-head { display: grid; }
+      .stats { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="shell">
-      <h1>Dutch A2 inburgering lessons</h1>
-      <p class="lead">Practice pages for reading, writing, speaking, listening, KNM, and grammar. Answers are hidden inside the lesson pages until you open them.</p>
+      <div class="topline">
+        <a class="brand" href="./" aria-label="Startpagina dagelijkse examenvoorbereiding">
+          <span class="mark">A2</span>
+          <span>Dagelijkse examenvoorbereiding</span>
+        </a>
+        <a class="toplink" href="#sets">Oefensets</a>
+      </div>
+
+      <section class="hero" aria-label="Start">
+        <div>
+          <h1>Begin met grammatica. Oefen daarna een volledige A2-ronde.</h1>
+          <p class="lead">Een simpele startpagina voor lezen, schrijven, spreken, luisteren, KNM en de grammatica die je nodig hebt om de basis goed te krijgen.</p>
+          <div class="hero-actions">
+            <a class="button" href="inburgering-a2-grammar-theory-practice-v001/">Open grammatica</a>
+            <a class="button secondary" href="#sets">Kies een oefenset</a>
+          </div>
+        </div>
+
+        <a class="grammar-feature" href="inburgering-a2-grammar-theory-practice-v001/" aria-label="Open grammatica uitleg en oefeningen">
+          <div class="feature-top">
+            <span class="feature-tag">Uitleg + oefenen</span>
+            <div class="tiles" aria-hidden="true">
+              <span class="tile">de</span>
+              <span class="tile">het</span>
+              <span class="tile">V2</span>
+              <span class="tile">niet</span>
+            </div>
+          </div>
+          <h2>Grammatica Theorie & Oefeningen</h2>
+          <p>Korte uitleg met directe opdrachten en antwoorden. Handig voor woordvolgorde, werkwoorden, vragen, ontkenning en lidwoorden.</p>
+          <div class="stats" aria-label="Wat zit erin">
+            <div class="stat"><strong>24</strong><span>oefeningen</span></div>
+            <div class="stat"><strong>6</strong><span>regels</span></div>
+            <div class="stat"><strong>A2</strong><span>basis</span></div>
+          </div>
+        </a>
+      </section>
     </div>
   </header>
-  <main class="shell">
-    <div class="grid">
-      <a class="card" href="inburgering-a2-html-lessons-v001/"><span class="tag">v001</span><strong>Lesson v001</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v002/"><span class="tag">v002</span><strong>Lesson v002</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v003/"><span class="tag">v003</span><strong>Lesson v003</strong><p>Normal v003 lesson index. The dated standalone daily HTML file is intentionally not published.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v004/"><span class="tag">v004</span><strong>Lesson v004</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v005/"><span class="tag">v005</span><strong>Lesson v005</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v006/"><span class="tag">v006</span><strong>Lesson v006</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v007/"><span class="tag">v007</span><strong>Lesson v007</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v008/"><span class="tag">v008</span><strong>Lesson v008</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v009/"><span class="tag">v009</span><strong>Lesson v009</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v010/"><span class="tag">v010</span><strong>Lesson v010</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v011/"><span class="tag">v011</span><strong>Lesson v011</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v012/"><span class="tag">v012</span><strong>Lesson v012</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-html-lessons-v013/"><span class="tag">v013</span><strong>Lesson v013</strong><p>Daily exam prep package with reading, writing, speaking, listening, KNM, and grammar.</p></a>
-      <a class="card" href="inburgering-a2-grammar-theory-practice-v001/"><span class="tag">Grammar</span><strong>Grammar theory and practice</strong><p>Explanation-first grammar lesson with practice tasks.</p></a>
+
+  <main class="shell" id="sets">
+    <div class="section-head">
+      <div>
+        <h2>Dagelijkse oefensets</h2>
+      </div>
+      <p>Elke set heeft lezen, schrijven, spreken, luisteren met audio, KNM en grammatica. Antwoorden staan verborgen tot je ze opent.</p>
+    </div>
+
+    <div class="grid" aria-label="Alle oefensets">
+      <a class="card" href="inburgering-a2-html-lessons-v001/"><span class="tag">Set 1</span><strong>Oefenset 1</strong><p>Een volledige A2-ronde met korte opdrachten en directe zelfcontrole.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v002/"><span class="tag">Set 2</span><strong>Oefenset 2</strong><p>Nieuwe examenachtige taken voor dagelijkse situaties in Nederland.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v003/"><span class="tag">Set 3</span><strong>Oefenset 3</strong><p>Compacte dagles met de normale interactieve lespagina.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v004/"><span class="tag">Set 4</span><strong>Oefenset 4</strong><p>Lezen, luisteren, schrijven, spreken, KNM en grammatica in een frisse ronde.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v005/"><span class="tag">Set 5</span><strong>Oefenset 5</strong><p>Praktijkvragen over afspraken, gezin, vervoer, gezondheid en werk.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v006/"><span class="tag">Set 6</span><strong>Oefenset 6</strong><p>Nieuwe korte teksten, audio-opdrachten en spreekkaarten om hardop te oefenen.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v007/"><span class="tag">Set 7</span><strong>Oefenset 7</strong><p>Een dagelijkse training met verborgen antwoorden en modelzinnen.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v008/"><span class="tag">Set 8</span><strong>Oefenset 8</strong><p>Oefen met korte A2-antwoorden voor gemeente, school, zorg en buurt.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v009/"><span class="tag">Set 9</span><strong>Oefenset 9</strong><p>Een volledige oefendag met audio, schrijfvelden en spreekafbeeldingen.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v010/"><span class="tag">Set 10</span><strong>Oefenset 10</strong><p>Herhaal de examenbasis met nieuwe situaties en directe feedback.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v011/"><span class="tag">Set 11</span><strong>Oefenset 11</strong><p>Praktische taken voor reizen, afspraken, formulieren en dagelijkse keuzes.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v012/"><span class="tag">Set 12</span><strong>Oefenset 12</strong><p>Meer A2-oefening met duidelijke stappen en antwoorden per opdracht.</p></a>
+      <a class="card" href="inburgering-a2-html-lessons-v013/"><span class="tag">Set 13</span><strong>Oefenset 13</strong><p>De nieuwste gepubliceerde oefenset met audio, beelden en grammatica.</p></a>
     </div>
   </main>
-  <footer><div class="shell">Static practice material for Dutch A2 inburgering preparation. Not an official DUO exam.</div></footer>
+
+  <footer><div class="shell">Oefenmateriaal voor inburgering A2. Dit is geen officieel DUO-examen.</div></footer>
 </body>
 </html>
