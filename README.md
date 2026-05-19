@@ -27,3 +27,11 @@ The `CNAME` file keeps the custom subdomain connected:
 ```text
 inburgering.learn-dutch-with-ai.com
 ```
+
+## Daily Automation
+
+The `daily-dutch-a2-lesson` automation creates the next Markdown and HTML lesson package, validates it locally, then publishes only the validated HTML package to this GitHub Pages folder.
+
+The automation should stop before committing or pushing if required files are missing, media references fail, answers are exposed by default, the publish repo is dirty, or GitHub sync fails.
+
+Only static public lesson assets belong here: HTML, CSS, JavaScript, MP3 audio, PNG/JPEG images, `CNAME`, `.nojekyll`, and this README. Markdown prep folders, local TODO files, automation files, drafts, and credentials should stay out of this repo.
