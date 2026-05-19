@@ -2,6 +2,10 @@
 
 Static GitHub Pages publish folder for the Dutch A2 inburgering lesson HTML packages.
 
+Live site: https://meanceo.github.io/inburgering-lessons/
+
+GitHub repository: https://github.com/meanceo/inburgering-lessons
+
 ## Included
 
 - inburgering-a2-html-lessons-v001 through v013
