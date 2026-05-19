@@ -20,7 +20,7 @@ The interface follows the latest approved compact responsive design pattern:
 - 28 KNM questions
 - 90 grammar drills
 - answer hide/show mode
-- answers hidden by default, with both global answer control and individual per-exercise answer toggles
+- answers hidden by default, with both global answer control and individual per-exercise answer toggles; the mobile global button uses a green X for hidden answers and a green checkmark for visible answers
 - print-friendly layout
 - compact responsive hero that avoids overlapping long Dutch text
 - mobile layout uses the full phone width with small side gutters, without a narrow fixed shell that leaves empty room on the right
@@ -68,7 +68,7 @@ Use the next unused numeric suffix at run time. Keep all HTML, audio, image, and
 
 Multiple-choice rule: do not make the correct answer always `A`. For KNM and any other A/B/C tasks, distribute correct answers across `A`, `B`, and `C` and keep the HTML answer key aligned with the Markdown files.
 
-Answer UI rule: HTML lessons must open with answers hidden. Keep the global answer button at the top, and also make every individual exercise answer clickable so the learner can show or hide just that one answer.
+Answer UI rule: HTML lessons must open with answers hidden. Keep the global answer button at the top, and also make every individual exercise answer clickable so the learner can show or hide just that one answer. On mobile, keep the global button compact as an icon: green X when answers are hidden, green checkmark when answers are visible.
 
 Public page rule: HTML titles, meta descriptions, footers, and public copy must use `by Violetta Bonenkamp`, not learner-targeted phrasing. Each published page must include one `<title>`, one meta description, one canonical URL, one visible `<h1>`, and header/footer navigation back to the main lesson index.
 
