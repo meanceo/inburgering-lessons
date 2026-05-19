@@ -885,8 +885,4 @@ h1 {
     transform: rotate(-45deg);
     transform-origin: center;
   }
-
-  body.answers-hidden #answerMode::after {
-    opacity: 0.2;
-  }
 }
