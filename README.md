@@ -10,11 +10,13 @@ GitHub repository: https://github.com/meanceo/inburgering-lessons
 
 ## Included
 
-- inburgering-a2-html-lessons-v001 through v013
+- inburgering-a2-html-lessons-v001 through v002
+- inburgering-a2-html-lessons-v004 through v013
 - inburgering-a2-grammar-theory-practice-v001
 
 ## Excluded
 
+- inburgering-a2-html-lessons-v003 legacy compact day lesson package
 - inburgering-a2-html-lessons-v003/2026-05-14_daily_exam_prep_a2_v003.html
 - .DS_Store and local working files
 
