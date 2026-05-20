@@ -10,13 +10,11 @@ GitHub repository: https://github.com/meanceo/inburgering-lessons
 
 ## Included
 
-- inburgering-a2-html-lessons-v001 through v002
-- inburgering-a2-html-lessons-v004 through v013
+- inburgering-a2-html-lessons-v001 through v014
 - inburgering-a2-grammar-theory-practice-v001
 
 ## Excluded
 
-- inburgering-a2-html-lessons-v003 legacy compact day lesson package
 - inburgering-a2-html-lessons-v003/2026-05-14_daily_exam_prep_a2_v003.html
 - .DS_Store and local working files
 
@@ -35,6 +33,8 @@ inburgering.learn-dutch-with-ai.com
 The `daily-dutch-a2-lesson` automation creates the next Markdown and HTML lesson package, validates it locally, then publishes only the validated HTML package to this GitHub Pages folder.
 
 The automation should stop before committing or pushing if required files are missing, media references fail, answers are exposed by default, the publish repo is dirty, or GitHub sync fails.
+
+Git commands must run with `/Users/violettashishkina/Documents/Dutch/inburgering-lessons` as the working directory and use plain approved commands such as `git fetch origin main`, `git merge --ff-only origin/main`, and `git push origin main`. Do not use `git -C /Users/violettashishkina/Documents/Dutch/inburgering-lessons ...` in the automation; that command shape can miss the persistent Git/network approval and fail with DNS errors in the sandbox.
 
 Only static public lesson assets belong here: HTML, CSS, JavaScript, MP3 audio, PNG/JPEG images, `CNAME`, `.nojekyll`, and this README. Markdown prep folders, local TODO files, automation files, drafts, and credentials should stay out of this repo.
 
