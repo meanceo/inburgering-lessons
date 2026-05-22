@@ -10,7 +10,7 @@ GitHub repository: https://github.com/meanceo/inburgering-lessons
 
 ## Included
 
-- inburgering-a2-html-lessons-v001 through v015
+- inburgering-a2-html-lessons-v001 through v016
 - inburgering-a2-grammar-theory-practice-v001
 
 ## Excluded
