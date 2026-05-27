@@ -41,6 +41,7 @@ Only static public lesson assets belong here: HTML, CSS, JavaScript, MP3 audio, 
 ## Public Page Rules
 
 - Public page titles and footers use `by Violetta Bonenkamp`, not learner-targeted phrasing.
+- Public lesson copy should describe what is included, not what is skipped; do not mention omitted exams or ONA in lesson pages.
 - Every published HTML page needs one `<title>`, one meta description, one canonical URL, and one visible `<h1>`.
 - Lesson and grammar pages must include a header link and footer link back to the main lesson index.
 - The mobile answer button should stay compact as an icon button while keeping the accessible label `Toon antwoorden` / `Verberg antwoorden`; show a green X when answers are hidden and a green checkmark when answers are visible.
